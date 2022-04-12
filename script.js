@@ -41,39 +41,39 @@ function getWeatherData() {
 getWeatherData();
 
 
-function showWeatherDate (data)
-    let {humidity, pressure, wind_speed, uvi} = data.current;
+// function showWeatherDate (data)
+//     let {humidity, pressure, wind_speed, uvi} = data.current;
 
-    currentWeatherItemsEl.innerHTML =
-    <><div class="weather-item">
-            <div>Humidity</div>
-            <div>${humidity}</div>
-        </div><><div class="weather-item">
-            <div>Pressure</div>
-            <div>${pressure}</div>
-        </div><div class="weather-item">
-                    <div>Wind Speed</div>
-                    <div>${wind_speed}</div>
-                </div><div class="weather-item">
-                    <div>UV Index</div>
-                    <div>${uvi}</div>
-                </div>
+//     currentWeatherItemsEl.innerHTML =
+//     <><div class="weather-item">
+//             <div>Humidity</div>
+//             <div>${humidity}</div>
+//         </div><><div class="weather-item">
+//             <div>Pressure</div>
+//             <div>${pressure}</div>
+//         </div><div class="weather-item">
+//                     <div>Wind Speed</div>
+//                     <div>${wind_speed}</div>
+//                 </div><div class="weather-item">
+//                     <div>UV Index</div>
+//                     <div>${uvi}</div>
+//                 </div>
 
-            </></>
+//             </></>
 
-    let otherDayForcast = ''
-    data.daily.forEach((d, idx) => {
-        if(idx == 0) {
+    // let otherDayForcast = ''
+    // data.daily.forEach((d, idx) => {
+    //     if(idx == 0) {
 
-        }else{
-            otherDayForcast += 
-                <div class="weather-forecast-item">
-                    <div class="day">$(window.moment(day.dt*1000).format('ddd))</div>
-                    <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
-                    <div class="temp">Night - ${day.temp.night}&#176; F</div>
-                    <div class="temp">Day - ${day.temp.day}&#176; F</div>
-                </div>
+    //     }else{
+    //         otherDayForcast += 
+    //             <div class="weather-forecast-item">
+    //                 <div class="day">$(window.moment(day.dt*1000).format('ddd))</div>
+    //                 <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
+    //                 <div class="temp">Night - ${day.temp.night}&#176; F</div>
+    //                 <div class="temp">Day - ${day.temp.day}&#176; F</div>
+    //             </div>
                 
-            }
-        })
+    //         }
+    //     })
 
